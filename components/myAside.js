@@ -1,11 +1,11 @@
 export default {
   nav:[
     {
-        title:"about",
+        title:"About",
         paragranph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis aperiam, dolorem sequi neque fugit iste praesentium! Tempore quisquam cum perferendis asperiores libero error, eos a vero consequatur, autem fuga.",
     },
     {
-        title:"archives",
+        title:"Archives",
         link:[
             {
                 name:"Abril 2",
@@ -24,7 +24,24 @@ export default {
                 href:"#",
             }
         ]
-    }
+    },
+    {
+      title:"Elsewhere",
+      link:[
+          {
+              name:"GitHub",
+              href:"#",
+          },
+          {
+            name:"Instagram",
+            href:"#",
+          },
+          {
+            name:"Facebook",
+            href:"#",
+        },
+      ]
+  }
   ],
 
   showAdside(){
@@ -40,7 +57,7 @@ export default {
   },
   cards(p1){
     return `
-    <div class="p-4 mb-3 bg-light rounded ">
+    <div class="p-4 mb-3 bg-black rounded ">
             <h4 class="fst-italic">${p1.title}</h4>
             <p class="mb-0">${p1.paragranph}</p>
           </div>` ;
@@ -55,5 +72,6 @@ export default {
             </ol>
           </div>
     `
-  }
+  },
+  
 }

@@ -1,6 +1,7 @@
 /* stylelint-disable selector-list-comma-newline-after */
 body{
-  background-color: rgb(173, 173, 173);
+  background-color: rgb(0, 0, 0);
+  color: #fff
 }
 .bd-placeholder-img {
   font-size: 1.125rem;

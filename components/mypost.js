@@ -30,7 +30,7 @@ export default {
         this.post1.forEach((val,id)=>{
             document.querySelector("#mypost1").insertAdjacentHTML("beforeend", `
             
-            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="cards">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-20 position-relative" id="cards">
                 <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-primary">${val.article}</strong>
                 <h3 class="mb-0">${val.title}</h3>
