@@ -37,13 +37,13 @@ export default {
     listTitle(){
         
         document.querySelector("#title").insertAdjacentHTML("beforeend",
-        `<a class="blog-header-logo text-dark" href="#">${this.title.name}</a>`)
+        `<a class="blog-header-logo text-light" href="#">${this.title.name}</a>`)
     },
 
     listarcompany(){
         let plantilla = "";
         this.company.forEach((val,id) => {
-            plantilla += `<a class="p-2 link-secondary " href="${val.href}">${val.name}</a>`
+            plantilla += `<a class="p-2 link-light " href="${val.href}">${val.name}</a>`
         });
         document.querySelector("#company").insertAdjacentHTML("beforeend", plantilla);
     }
