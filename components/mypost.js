@@ -4,10 +4,10 @@ export default {
             article: "Moto Deportiva",
             title: "Motos deportivas",
             date: "Nov 12",
-            paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+            paragraph: `Moto con características de conducción más agresivas que las de una motocicleta de turismo. Para correr `,
             btn:{
                 name: "Continue reading",
-                href: "#"
+                href: "https://es.wikipedia.org/wiki/Motocicleta_deportiva"
             },
             image: "/img/post1.png"
         }
@@ -17,39 +17,40 @@ export default {
         {
             article: "FirstMotorbike",
             title: "La Primera Moto",
-            date: "Nov 12",
-            paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+            date: "1817-1885 ",
+            paragraph: `La primera motocicleta propiamente dicha fue creada en 1885 por el ingeniero alemán Gottlieb Daimler.`,
             btn:{
                 name: "Continue reading",
-                href: "#"
+                href: "https://ducatimadrid.com/noticias/quien-invento-la-moto/#:~:text=El%20estadounidense%20Sylvester%20Howard%20Roper,que%20son%20hoy%20en%20d%C3%ADa."
             },
-            image: "/img/post1.png"
+            image: "/img/post2.jpg"
         }
     ],
     post3: [
         {
-            article: "FirstMotorbike",
-            title: "La Primera Moto",
-            date: "Nov 12",
-            paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+            article: "FirstMotorbikeRunner",
+            title: "Primera Moto Deportiva",
+            date: "1969-2003",
+            paragraph: `La CB750 fue la primera motocicleta en presentar un motor de cuatro cilindros , lo que mejoró  su rendimiento y aceleración.
+            `,
             btn:{
                 name: "Continue reading",
-                href: "#"
+                href: "https://es.wikipedia.org/wiki/Honda_CB750"
             },
-            image: "/img/post1.png"
+            image: "/img/post3.jpg"
         }
     ],
     post4: [
         {
-            article: "FirstMotorbike",
-            title: "La Primera Moto",
-            date: "Nov 12",
-            paragraph: `This is a wider card with supporting text below as a natural lead-in to additional constent`,
+            article: "TheFastestMotorBike",
+            title: "Kawasaki Ninja H2R",
+            date: "Nov, 2014",
+            paragraph: `Tiene una potencia máxima de 310 caballos de fuerza. La Ninja H2R es capaz de alcanzar velocidades superiores a los 400 km/h`,
             btn:{
                 name: "Continue reading",
-                href: "#"
+                href: "https://www.kawasaki.com/motorcycle/ninja/h2r"
             },
-            image: "/img/post1.png"
+            image: "/img/post4.jpg"
         }
     ],
     showPost(){
@@ -62,7 +63,7 @@ export default {
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 text-muted">${val.date}</div>
                 <p class="card-text mb-auto">${val.paragraph}</p>
-                <a href="#" class="stretched-link">${val.btn.name}</a>
+                <a href="${val.btn.href}" class="stretched-link">${val.btn.name}</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <img src="${val.image}" class="responsiveImg">
@@ -80,7 +81,7 @@ export default {
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 text-muted">${val.date}</div>
                 <p class="card-text mb-auto">${val.paragraph}</p>
-                <a href="#" class="stretched-link">${val.btn.name}</a>
+                <a href="${val.btn.href}" class="stretched-link">${val.btn.name}</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <img src="${val.image}" class="responsiveImg">
@@ -98,7 +99,7 @@ export default {
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 text-muted">${val.date}</div>
                 <p class="card-text mb-auto">${val.paragraph}</p>
-                <a href="#" class="stretched-link">${val.btn.name}</a>
+                <a href="${val.btn.href}" class="stretched-link">${val.btn.name}</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <img src="${val.image}" class="responsiveImg">
@@ -116,7 +117,7 @@ export default {
                 <h3 class="mb-0">${val.title}</h3>
                 <div class="mb-1 text-muted">${val.date}</div>
                 <p class="card-text mb-auto">${val.paragraph}</p>
-                <a href="#" class="stretched-link">${val.btn.name}</a>
+                <a href="${val.btn.href}" class="stretched-link">${val.btn.name}</a>
             </div>
             <div class="col-auto d-none d-lg-block">
                 <img src="${val.image}" class="responsiveImg">

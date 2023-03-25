@@ -2,26 +2,26 @@ export default {
   nav:[
     {
         title:"About",
-        paragranph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum corporis aperiam, dolorem sequi neque fugit iste praesentium! Tempore quisquam cum perferendis asperiores libero error, eos a vero consequatur, autem fuga.",
+        paragranph:"Esta pagina se trata de mostrar un poco acerca de las motos como; su historia, motos, la moto mas rapida, la seguridad que debemos tener entre otros. Te queremos enseñar lo mas posible para que puedas aprender algo acerca de estos vehiculos de movilizacion sobre dos ruedas en general",
     },
     {
         title:"Archives",
         link:[
             {
-                name:"Abril 2",
-                href:"#",
+                name:"1817",
+                href:"https://issuu.com/joseluissagredofernandez/docs/historia_bici",
             },
             {
-                name:"Abril 3",
-                href:"#",
+                name:"1867",
+                href:"https://www.bikester.es/info/historia-bicicleta/",
             },
             {
-                name:"Abril 4",
-                href:"#",
+                name:"1885",
+                href:"https://es.wikipedia.org/wiki/Daimler_Reitwagen",
             },
             {
-                name:"Abril 5",
-                href:"#",
+                name:"1894",
+                href:"https://www.motorpasionmoto.com/clasicas/hildebrand-wolfmuller-se-vende-la-primera-moto-de-la-historia",
             }
         ]
     },
@@ -30,15 +30,15 @@ export default {
       link:[
           {
               name:"GitHub",
-              href:"#",
+              href:"https://github.com/JuanDiegoQuinteroCampus",
           },
           {
             name:"Instagram",
-            href:"#",
+            href:"https://www.instagram.com/",
           },
           {
             name:"Facebook",
-            href:"#",
+            href:"https://www.facebook.com/",
         },
       ]
   }

@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 11px;
+    height: 11px;
   }
 
   *::-webkit-scrollbar-track {
@@ -150,5 +151,14 @@ h1, h2, h3, h4, h5, h6 {
   *::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     border-radius: 11px;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
+  }
+  /* si algo se puede quitar estooooo */
+  #x{
+    
+      width: 250px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      
   }
