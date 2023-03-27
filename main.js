@@ -6,8 +6,8 @@ import myArticle from "./components/myarticle.js";
 import myArticle2 from "./components/myarticle2.js";
 import myfooter from "./components/myfooter.js";
 
-myheader.listTitle();
-myheader.listarcompany();
+myheader.show();
+
 
 mybanner.showImage();
 mybanner.showSectionBanner();
