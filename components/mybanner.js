@@ -1,18 +1,23 @@
 export default {
-    image:"../img/jum.jpeg",
-    title:{name:"MotosRacing"},
+    imagen:{image:"../img/jum.jpeg",},
+    texto:{title:{name:"MotosRacing"},
     contenido:{name:"Una motocicleta, comúnmente conocida en español con la abreviatura moto, es un vehículo de dos ruedas,​ impulsado por un motor de combustión interna a gasolina que acciona la rueda trasera, en raras excepciones en las que el impulso se daría en la rueda delantera o en ambas, superior a 50 cc. si es de combustión interna y con una velocidad máxima por construcción superior a 45 km/h.​ El cuadro o chasis y las ruedas constituyen la estructura fundamental del vehículo. La rueda directriz es la delantera. Pueden transportar hasta dos personas, y tres si están dotadas de sidecar."},
     continue:{name:"Continue reading..."},
-    btn: {href:"https://es.wikipedia.org/wiki/Motocicleta"},
+    btn: {href:"https://es.wikipedia.org/wiki/Motocicleta"},},
 
     showmybanner(){
         const ws = new Worker("storage/wsMyBanner.js", {type:"module"});
         id=[];
         let count =0;
-        ws.postMessage({module: ""})
+        ws.postMessage({module: "showImage", data:this.imagen});
+        ws.postMessage({module: "showSectionBanner", data:this.texto});
+        id=["#banner","#"];
+        ws.addEventListener("message",(e)=>{
+            let cont = new DOMParser().parseFromString(e.data,"text/html");
+            document.querySelector(id[count]).append(...cont.body.children);
+            (id.length-1==count) ? ws.terminate(): count++;
+        })
     },
-
-   
     
 }
 
