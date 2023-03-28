@@ -35,7 +35,7 @@ export default {
     ],
 
     show(){
-        const ws = new Worker("storage/wsMyHeader.js", {tupe:"module"});
+        const ws = new Worker("storage/wsMyHeader.js", {type:"module"});
         let id=[];
         let count = 0;
         ws.postMessage({module:"listTitle", data:this.title});
