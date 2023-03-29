@@ -19,7 +19,7 @@ mypost.showPost();
 
 myAside.showAdside();
 
-myArticle.showartitle();
+myArticle.showartitlefull();
 
 myArticle2.showartitle2();
 

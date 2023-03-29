@@ -45,6 +45,7 @@ export default {
             let doc = new DOMParser().parseFromString(e.data,"text/html");
             document.querySelector(id[count]).append(...doc.body.children);
             (id.length-1==count) ? ws.terminate(): count++;
+            
         })
     }
     

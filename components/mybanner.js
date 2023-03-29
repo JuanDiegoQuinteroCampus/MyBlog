@@ -6,16 +6,20 @@ export default {
     btn: {href:"https://es.wikipedia.org/wiki/Motocicleta"},},
 
     showmybanner(){
+        
+
         const ws = new Worker("storage/wsMyBanner.js", {type:"module"});
         let id=[];
-        let count =0;
-        ws.postMessage({module: "showImage", data:this.imagen});
-        ws.postMessage({module: "showSectionBanner", data:this.texto});
-        id=["#banner",".imgStyle"];
+        let count = 0;
+        ws.postMessage({module:"showImage", data:this.imagen});
+        ws.postMessage({module:"showSectionBanner", data:this.texto});
+        
+        id=["#banner", ".imgStyle"];
         ws.addEventListener("message",(e)=>{
             let cont = new DOMParser().parseFromString(e.data,"text/html");
             document.querySelector(id[count]).append(...cont.body.children);
             (id.length-1==count) ? ws.terminate(): count++;
+            
         })
         document.querySelector("#imgStyle").style.backgroundImage = `url(${this.imagen.image})`;
     },
