@@ -1,12 +1,10 @@
+import config from "../storage/config.js";
 export default {
-    imagen:{image:"../img/jum.jpeg",},
-    texto:{title:{name:"MotosRacing"},
-    contenido:{name:"Una motocicleta, comúnmente conocida en español con la abreviatura moto, es un vehículo de dos ruedas,​ impulsado por un motor de combustión interna a gasolina que acciona la rueda trasera, en raras excepciones en las que el impulso se daría en la rueda delantera o en ambas, superior a 50 cc. si es de combustión interna y con una velocidad máxima por construcción superior a 45 km/h.​ El cuadro o chasis y las ruedas constituyen la estructura fundamental del vehículo. La rueda directriz es la delantera. Pueden transportar hasta dos personas, y tres si están dotadas de sidecar."},
-    continue:{name:"Continue reading..."},
-    btn: {href:"https://es.wikipedia.org/wiki/Motocicleta"},},
+    
 
     showmybanner(){
-        
+        config.dataMyBanner();
+        Object.assign(this, JSON.parse(localStorage.getItem("mybanner")));
 
         const ws = new Worker("storage/wsMyBanner.js", {type:"module"});
         let id=[];
@@ -14,7 +12,7 @@ export default {
         ws.postMessage({module:"showImage", data:this.imagen});
         ws.postMessage({module:"showSectionBanner", data:this.texto});
         
-        id=["#banner", ".imgStyle"];
+        id=["#banner"];
         ws.addEventListener("message",(e)=>{
             let cont = new DOMParser().parseFromString(e.data,"text/html");
             document.querySelector(id[count]).append(...cont.body.children);

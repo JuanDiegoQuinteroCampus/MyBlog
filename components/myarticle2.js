@@ -1,4 +1,27 @@
+import config from "../storage/config.js";
 export default {
+  
+  
+
+  showartitle2(){
+    config.dataMyArticle2();
+    Object.assign(this, JSON.parse(localStorage.getItem("myarticle2")));
+
+    const ws = new Worker("storage/wsMyarticle2.js", {type:"module"});
+    let id=[];
+    let count = 0;
+    ws.postMessage({module:"showartitle2", data:this.total2});
+    
+    id=["#informacion2"];
+    ws.addEventListener("message",(e)=>{
+        let doc = new DOMParser().parseFromString(e.data,"text/html");
+        document.querySelector(id[count]).append(...doc.body.children);
+        (id.length-1==count) ? ws.terminate(): count++;
+        
+    })
+  }
+}
+/* export default {
     total2:[
         {
             contenido:{
@@ -141,4 +164,4 @@ export default {
             `);
         })
     }
-}
+} */
